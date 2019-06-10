@@ -52,6 +52,7 @@ module TestQueue
           next unless suite
 
           $0 = "#{procline} - #{suite.respond_to?(:description) ? suite.description : suite}"
+          puts "Running #{suite.respond_to?(:descripton) ? suite.description: suite}"
           start = Time.now
           if @filter
             @filter.call(suite){ yield suite }
